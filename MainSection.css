@@ -1,0 +1,270 @@
+/* Estilos generales para el layout */
+.section-buttons {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    margin-top: 1.5rem;
+}
+
+/* Botones sin borde azul y con tamaño igual */
+.section-buttons button {
+    background-color: #00aaff !important;
+    color: white !important;
+    border: none !important; /* Elimina los bordes */
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    flex-grow: 1; /* Asegura que los botones se expandan para llenar el espacio */
+    margin: 0 !important; /* Elimina los márgenes entre botones */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px !important; /* Asegura que todos los botones tengan el mismo ancho */
+    height: 60px !important; /* Asegura que todos los botones tengan la misma altura */
+}
+
+/* Hover y focus para los botones */
+.section-buttons button:hover {
+    background-color: #0088cc !important;
+}
+
+.section-buttons button:focus {
+    background-color: #006699 !important;
+    outline: none !important;
+}
+
+/* Contenido de la sección */
+.section-content {
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Encabezado */
+.header-section {
+    position: relative;
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+.header-section img {
+    width: 100%;
+    height: auto;
+}
+
+.doctor-info {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    color: white;
+}
+
+.doctor-img {
+    width: 100px;
+    height: 100px;
+    border: 3px solid white;
+}
+
+.doctor-details h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #003366;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.doctor-details p {
+    margin: 0;
+    color: #003366;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Ajustes de espaciado y botones más responsivos */
+.section-buttons .btn {
+    margin: 0 !important; /* Asegura que no haya espacio entre botones */
+    border: none !important; /* Elimina los bordes */
+}
+
+.section-content {
+    margin-top: 1rem;
+}
+
+/* Sección principal asegurando que ocupe el 100% de la pantalla */
+.main-section {
+    min-height: 100vh;
+}
+
+.footer-section {
+    border-top: 1px solid #ddd;
+    padding: 10px;
+}
+
+/* Botones grandes */
+.btn-lg {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+}
+
+/* Los botones ocupan todo el ancho en pantallas pequeñas */
+.btn-full-width {
+    width: 100% !important;
+}
+.logo-text {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-right: 10px;
+}
+.logo-title {
+    font-size: 10vw !important; /* Aumenta el tamaño del título */
+    font-weight: bold;
+    color: #003366; /* Azul oscuro */
+}
+
+.logo-subtitle {
+    font-size: 5vw !important; /* Aumenta el tamaño del subtítulo */
+    color: #003366;
+}
+/* Responsive design para pantallas pequeñas */
+@media (max-width: 576px) {
+    .btn-full-width {
+        width: 100% !important;
+        margin-bottom: 5px;
+    }
+
+    .section-buttons {
+        flex-direction: column; /* Los botones se apilan en pantallas pequeñas */
+    }
+
+    .section-buttons button {
+        margin-bottom: 0px !important; /* Elimina el espaciado entre los botones cuando están apilados */
+    }
+
+    /* Ocultar texto y solo mostrar iconos en pantallas pequeñas */
+    .section-buttons button span {
+        display: none;
+    }
+}
+
+@media (min-width: 576px) {
+    .btn-full-width {
+        width: auto !important;
+    }
+}
+
+.section-buttons button {
+    background-color: #00aaff !important;
+    color: white !important;
+    border: none !important;
+}
+
+.section-buttons button:hover {
+    background-color: #0088cc !important;
+}
+
+.section-buttons button:focus {
+    background-color: #006699 !important;
+    outline: none !important;
+}
+.navbar.fixed-bottom .container-fluid {
+    display: flex;
+    background-color: rgba(0, 30, 60, 0.5); /* Fondo negro semi-transparente */
+    color: white;
+    justify-content: space-around; /* Distribuye los botones equitativamente */
+    padding: 10px 0; /* Ajusta el espacio vertical */
+}
+/* Estilos adicionales para el navbar responsive */
+.navbar .nav-link {
+    width: auto;
+    align-items: center;
+    padding: 10px 15px;
+    font-size: 16px; /* Ajusta el tamaño de la fuente según sea necesario */
+    margin: 0 10px;
+}
+
+.navbar .btn-lg {
+    width: 140px;
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar .btn-lg .fa {
+    font-size: 24.px !important;
+}
+
+@media (max-width: 576px) {
+    .navbar .btn-lg {
+        width: 80px;
+        padding: 10px;
+    }
+
+    .navbar .btn-lg .fa {
+        font-size: 1.5rem;
+    }
+
+    .navbar .btn-lg span {
+        display: none; /* Oculta el texto en dispositivos móviles */
+    }
+}
+
+.banner-img {
+    width: 100%;         /* Mantiene el ancho completo del contenedor */
+    height: 250px;       /* Ajusta la altura del banner */
+    object-fit: cover;   /* Mantiene las proporciones de la imagen */
+    margin-bottom: 10px; /* Margen opcional para separar el banner del contenido */
+}
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    text-align: center;
+}
+/* Estilos para el navbar superior */
+.navbar-logo {
+    display: inline-block;
+    width: 50px; /* Adjust the width of the logo */
+    height: 50px;
+  }
+  .navbar-brand span {
+    margin-left: 10px; /* Add space between the logo and the text */
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #003366; /* Ensure the text color fits the design */
+}
+  
+  @media (max-width: 576px) {
+    .navbar-brand {
+        justify-content: center; /* Center the content for mobile screens */
+    }
+    .navbar-logo {
+      width: 80px; /* Tamaño reducido para pantallas pequeñas */
+    }
+  }
+  
+  .banner-img {
+    width: 100%;     /* Ocupa todo el ancho de la pantalla */
+    height: 250px;   /* Ajusta la altura según el tamaño deseado para el banner */
+    object-fit: cover; /* Asegura que la imagen se ajuste correctamente sin perder proporción */
+    margin-bottom: 10px; /* Añade un pequeño margen debajo si es necesario */
+  }
+  
+  /* Otros estilos del layout */
+  .main-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
